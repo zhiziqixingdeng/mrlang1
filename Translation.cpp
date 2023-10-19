@@ -4,7 +4,6 @@
 using namespace std;
 string str,str2,a,w;
 int n;
-char x='"';//因为直接cout会出现十分尴尬的情况
 int main(){
 	freopen("mr-lang.txt","r",stdin);
   freopen("mr-lang.cpp","w",stdout);
@@ -20,13 +19,19 @@ int main(){
 		cout<<"cout<<"<<str2<<";"<<endl;
 	}
 	if(str=="pause"){
-		cout<<"system("<<str2<<")"<<endl;
+		cout<<"system("<<str<<")"<<endl;
 	}
-	if(str=="CLS"){
-		cout<<"system("<<str2<<");"<<endl;
+	if(str=="cls"){
+		cout<<"system("<<str<<");"<<endl;
 	}
 	if(str=="if"){
 		cout<<"if("<<str2<<") ";
+	}
+	if(str=="start"){
+		cout<<"system(start "<<str2<<")"<<endl;
+	}
+	if(str=="endl"){
+		cout<<"cout<<endl;"<<endl;
 	}
 	if(str=="new"){
 		cout<<"int "<<str2<<";"<<endl;
